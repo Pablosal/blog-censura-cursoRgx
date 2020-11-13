@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog El Cavernario</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+      :root {
+        --background-color: #fff;
+        --blog-color: #E6F5FF;
+        --headline-color: #A1ACB3;
+        --profile-color: #8FB399;
+      }
+
+      body {
+        font-family: Arial;
+        background: var(--background-color);
+        margin:0;
+      }
+      .blur {
+        color: transparent;
+        text-shadow: 0 0 18px #000;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+      }
+      /* Header/Blog Title */
+      .header {
+        padding: 5px;
+        font-size: 25px;
+        text-align: center;
+        background-color: var(--headline-color);
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+      }
+      a{
+        color: black;
+        cursor: pointer;
+      }
+      /* Right column */
+      .leftcolumn {
+        float: left;
+        width: 65%;
+        padding-left: 20px;
+      }
+
+      /* Right column */
+      .rightcolumn {
+        /* float: right; */
+        width: 25%;
+        right: 0;
+        /* padding-left: 20px; */
+        position: fixed;
+      }
+
+      /* Fake image */
+      .fakeimg {
+        width: 80%;
+        padding: 20px;
+        height:"200px";
+      }
+      img{
+        object-fit: center;
+      }
+
+      .about_description {
+        text-align: center;
+      }
+      .personal_blog_card {
+        background-color: var(--profile-color);
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+      }
+      /* Add a card effect for articles */
+      .blog_card {
+        background-color: var(--blog-color);
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .row {
+        font-family: "Open Sans", sans-serif;
+      }
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+        .rightcolumn{
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="./index.html">
+        <h2>El Cavernario</h2>
+      </a>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="blog_card">
+          <a class="blogpost_title" data_url="./blogPost1.html">
+            <h2>Cientifica relata sus dias de COVID</h2>
+          </a>
+          <h5>Portadora de una larga recuperacion</h5>
+          <!-- Foto de Adi Perets en Pexels -->
+          <img src="./images/pexels-adi-perets-4126628.jpg" class="fakeimg" alt="blog_image">
+        </div>
+        <div class="blog_card">
+          <a class="blogpost_title" data_url="./blogPost2.html">
+            <h2>
+              Un bosque emburjado fue explorado con un dron
+            </h2>
+          </a>
+          <h5>Nadie podia presagiar que el bosque era realmente un set de cine...</h5>
+          <!-- Foto de Alex Kozlov en Pexels -->
+          <img src="./images/pexels-alex-kozlov-5443678.jpg" class="fakeimg" alt="blog_image">
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="personal_blog_card">
+          <h2>About Me</h2>
+          <!-- Foto de Jeswin Thomas en Pexels -->
+          <img src="./images/pexels-jeswin-thomas-1607862.jpg"  width="200px" alt="perfil" />
+          <p class="about_description">
+            Creador del cavernario del siglo 32, un aventurero sin prisa por ver
+            el futuro
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
